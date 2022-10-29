@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+    outline: 1px solid red;
+    font-family: 'Kanit', sans-serif;
+    font-size: 24px;
+}
+
+body {
+    background-color: aliceblue;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.result{
+    z-index: 1040;
+    margin-bottom: 5rem;
+    position: fixed;
+}
+
+.result >h1{
+    color: pink;
+    font-size: 0px;
+    transition: .4s all ease-in-out;
+}
+
+main {
+    z-index: 1030;
+    width: 40rem;
+    position: relative;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.all{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.box {
+    width: 40%;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.box>h2{
+    margin-bottom: 1rem;
+    font-size: 32px;
+}
+
+
+input{
+    width: 80%;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 50px;
+    box-shadow: 0 0 15px #ccc;
+    transition: .2s all ease-in-out;
+    text-align: center;
+}
+
+button{
+    font-size: 24px;
+    padding: .5rem 1rem;
+    border: none;
+    border-radius: 30px;
+    background-color: salmon;
+    color: aliceblue;
+    cursor: pointer;
+    transition: .4s all ease-in-out;
+}
+
+.img{
+    z-index: -2;
+    background-image: url(/Asset\ 1.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: fixed;
+    transition: .4s all ease-in-out;
+    
+    width: 0rem;
+    height: 0rem;
+}
+
+/* DANAMIC */
+
+button:hover {
+    background-color: aliceblue;
+    box-shadow: 4px 4px 0 salmon;
+    color: salmon;
+}
+
+input:focus{
+    outline: 3px solid salmon;
+    border: none;
+}
+
+@media only screen and (max-width:960px) {
+    main{
+        width: 100%;
+        height: auto;
+    }
+    .all{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .box {
+        width: 100%;
+    }
+
+    .box > h2{
+        font-size: 16px;
+    }
+
+    input{
+        font-size: 16px;
+        padding: 0.2rem 0.5rem;
+    }
+
+    button{
+        font-size: 18px;
+    }
+
+    .result{
+        top: 5%;
+    }
+}
